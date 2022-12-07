@@ -1,0 +1,32 @@
+#popup-background {
+    background-color: rgba(72, 113, 116, 0.5);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+#popup-container {
+    width: 300px;
+    height: 200px;
+    background-color: $card-color;
+    border-radius: 40px;
+    @include flex-column(center);
+    border: 2px #497174 solid;
+
+    div {
+        width: 80%;
+        margin: 0 auto;
+        @include flex-column(space-between);
+        gap: 2rem;
+
+        button {
+            width: 60%;
+            border: 1px #497174 solid;
+            border-radius: 50px;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+    }
+}

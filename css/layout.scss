@@ -1,0 +1,90 @@
+@font-face {
+    font-family: comfortaa;
+    src: url(../fonts/Comfortaa-VariableFont_wght.ttf);
+}
+
+html, body{
+    margin: 0;
+    height: 100vh;
+    background-color: $background-color;
+    font-family: comfortaa;
+}
+
+main {
+    height: 100vh;
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 1051px){
+    p {
+        font-size: 1.5rem;
+    }
+
+    #rounds p {
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+    main {
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 2fr;
+
+        #you {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        #rounds {
+            grid-column: 1/3;
+            grid-row: 1/2;
+            align-self: center;
+        }
+
+        #cpu {
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+    }
+}
+
+@media screen and (max-width: 1050px){
+    body {
+        display: grid;
+        place-items: center;
+
+        main {
+            width: 90%;
+            height: 90%;
+            margin: 0 auto;
+            @include flex-column(center);
+            gap: 20px;
+
+            
+        } 
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    p {
+        font-size: 0.6rem;
+    }
+}

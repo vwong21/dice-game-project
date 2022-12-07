@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FInal Project | Vincent Wong</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../scripts/jquery3.6.1.js" defer></script>
+    <script src="../scripts/script.js" defer></script>
+</head>
+
+<body>
+    <aside id="popup-background">
+        <div id="popup-container">
+            <div>
+                <h1 id="win-or-lose">Winner</h1>
+                <button type="button" id="play-again">Click to Play Again</button>
+            </div>
+
+        </div>
+    </aside>
+    <main>
+        <section class="player-card" id="you">
+            <img src="../images/player.png" alt="Player Image" class="player-image">
+            <p class="player-name">You</p>
+            <p class="score" id="user-score">0</p>
+            <button type="button" id="roll-dice">Roll Dice</button>
+            <div class="dice-container">
+                <img src="" alt="Dice" id="user-dice-one" class="dice">
+                <img src="" alt="Dice" id="user-dice-two" class="dice">
+            </div>
+        </section>
+        <section id="rounds">
+            <p>Round: <span id="round-number">1</span></p>
+        </section>
+        <section class="player-card" id="cpu">
+            <img src="../images/cpu.png" alt="Computer Image" class="player-image">
+            <p class="player-name">CPU</p>
+            <p class="score" id="cpu-score">0</p>
+            <div class="dice-container">
+                <img src="" alt="Dice" id="cpu-dice-one" class="dice">
+                <img src="" alt="Dice" id="cpu-dice-two" class="dice">
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

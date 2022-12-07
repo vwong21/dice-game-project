@@ -1,0 +1,11 @@
+@mixin flex-column($justify-content){
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: $justify-content
+};
+
+@mixin flex-row($justify-content){
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: $justify-content
+};
