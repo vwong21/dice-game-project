@@ -8,6 +8,7 @@ const cpuDiceTwo = document.getElementById('cpu-dice-two')
 const roundNumber = document.getElementById('round-number')
 const dices = document.querySelectorAll('.dice')
 const $popup = $('#popup-background')
+const $winner = $('#win-or-lose')
 const playAgain = document.getElementById('play-again')
 
 let userDices = {
@@ -44,6 +45,13 @@ $rollDiceBtn.click(function(){
     console.log(currentRound)
     if(currentRound == 3){
         $popup.fadeIn()
+        if(userResult > cpuResult){
+            $winner.html('You Win!')
+        }else if(userResult < cpuResult){
+            $winner.html('You Lose')
+        }else{
+            $winner.html('Tie')
+        }
         playAgain.addEventListener('click', function(){
             $popup.fadeOut()
             currentRound = 0
